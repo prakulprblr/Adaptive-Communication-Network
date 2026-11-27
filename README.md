@@ -12,12 +12,21 @@ Software-Defined Networking mini-project demonstrating OpenFlow 1.3 link-failure
 ## Project structure
 
 ```text
-application/   UDP client, server, monitor, and failure test
-controller/    OS-Ken SDN controller
-topology/      Mininet topology
+application/
+  failure_test.py
+  udp_client.py
+  udp_monitor.py
+  udp_server.py
+controller/
+  __init__.py
+  controller.py
+  run_controller.py
+topology/
+  topology.py
+results/
+  test-summary.md
 requirements.txt
 .gitignore
-project/Adaptive-Communication-Network-GitHub.zip  Full clean project archive, including recorded results
 ```
 
 ## Prerequisites
@@ -72,7 +81,7 @@ Run the server and client on the appropriate Mininet hosts using the configured 
 
 ## Recorded results
 
-The full archive in `project/` includes the captured baseline, failure, and continuous-monitor output. One monitor run recorded 999/1,000 packets received (0.10% packet loss) and an observed outage interval of 0.029 seconds. This is a run-specific observation, not a validated general recovery-time guarantee.
+See `results/test-summary.md` for the captured baseline, failure, and continuous-monitor results. These are observations from the recorded runs, not guarantees for every environment.
 
 ## Notes
 
